@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Commission</title>
+  <title>Commissions - Digital Art Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor"></div>
-
   <header class="fade-in">
-    <h1 class="logo">Commission a Custom Artwork</h1>
+    <h1 class="logo">Art Commissions</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,25 +18,22 @@
     </nav>
   </header>
 
-  <section class="commission-form fade-in">
-    <form id="commissionForm">
-      <label>Your Name:</label>
-      <input type="text" id="name" required>
+<div class="custom-cursor"></div>
 
-      <label>Email:</label>
-      <input type="email" id="email" required>
-
-      <label>Describe Your Idea:</label>
-      <textarea id="details" rows="4" required></textarea>
-
-      <button type="submit">Submit Request</button>
+  <section class="comm fade-in">
+    <h2>Request Custom Art 🖼️</h2>
+    <p>Want a personalized drawing or portrait? Fill out the form below to commission your dream artwork.</p>
+    <form class="commission-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Describe Your Commission Request" required></textarea>
+      <button class="btn">Submit Request</button>
     </form>
   </section>
 
   <footer class="fade-in">
     <p>© 2025 Digital Art Gallery | Created by Harshil</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
