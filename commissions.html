@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Commission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor"></div>
+
+  <header class="fade-in">
+    <h1 class="logo">Commission a Custom Artwork</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="upload.html">Upload</a>
+      <a href="commissions.html" class="active">Commissions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="commission-form fade-in">
+    <form id="commissionForm">
+      <label>Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Describe Your Idea:</label>
+      <textarea id="details" rows="4" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Digital Art Gallery | Created by Harshil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

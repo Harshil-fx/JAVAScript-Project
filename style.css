@@ -1,0 +1,183 @@
+/* ----------- Global & Aesthetic Theme ----------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #111, #1b0033);
+  color: #f0eaff;
+  overflow-x: hidden;
+}
+
+/* ----------- Custom Cursor ----------- */
+.cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #c77dff;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.1s ease, background 0.2s;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+/* ----------- Header ----------- */
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #e0aaff;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #c77dff;
+}
+
+/* ----------- Hero Section ----------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #240046, #10002b);
+  animation: fadeSlide 1s ease-out;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #9d4edd;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #5a189a;
+  transform: scale(1.05);
+}
+
+/* ----------- Gallery ----------- */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.art-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.3s;
+}
+
+.art-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(199,125,255,0.4);
+}
+
+.art-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.art-card h3 {
+  padding: 15px;
+}
+
+/* ----------- About Section ----------- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.about img {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ----------- Footer ----------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  margin-top: 40px;
+}
+
+/* ----------- Animations ----------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

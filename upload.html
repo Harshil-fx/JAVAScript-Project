@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Artwork</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor"></div>
+
+  <header class="fade-in">
+    <h1 class="logo">Upload Your Artwork</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="upload.html" class="active">Upload</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="upload-section fade-in">
+    <form id="uploadForm">
+      <label>Artwork Title:</label>
+      <input type="text" id="title" required>
+
+      <label>Upload Image:</label>
+      <input type="file" id="image" accept="image/*" required>
+
+      <button type="submit">Upload</button>
+    </form>
+    <div id="preview"></div>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Digital Art Gallery | Created by Harshil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
