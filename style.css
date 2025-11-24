@@ -1,172 +1,192 @@
-/* ------------------------------
-   Global Styles
------------------------------- */
+/* GLOBAL STYLING */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32"><polygon points="2,2 2,30 10,24 14,30 18,28 14,20 26,16 2,2" fill="%23b388ff"/></svg>') 4 4, auto;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top left, #1e003e, #100022);
-  color: #f2eaff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
-  animation: fadeInPage 1.2s ease-in;
+  background: #0b001d;
+  color: #fff;
+  cursor: none;
 }
 
-@keyframes fadeInPage {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ------------------------------
-   Header and Navigation
------------------------------- */
+/* HEADER */
 header {
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  background: rgba(60, 0, 130, 0.3);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 2rem;
-  color: #d8b4fe;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-nav {
-  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 nav a {
-  color: #cdb4ff;
+  margin-left: 20px;
+  color: #bfaaff;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1rem;
-  position: relative;
-  transition: color 0.3s ease;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background: #d8b4fe;
+nav .active {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  margin-top: 20px;
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
   transition: 0.3s;
 }
 
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
+.btn:hover {
+  background: rgba(255,255,255,0.2);
 }
 
-nav a:hover {
-  color: #ffffff;
-}
-
-/* ------------------------------
-   Sections
------------------------------- */
-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 60px auto;
-  text-align: center;
-  animation: fadeInSection 1.5s ease forwards;
-}
-
-@keyframes fadeInSection {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-section h2 {
-  color: #e9d5ff;
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-section p {
-  color: #d1b3ff;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-/* ------------------------------
-   Gallery Grid
------------------------------- */
+/* GALLERY GRID */
 .gallery {
+  padding: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
 }
 
 .gallery img {
   width: 100%;
   border-radius: 15px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 8px 20px rgba(150, 100, 255, 0.2);
+  object-fit: cover;
+  height: 260px;
+  transition: 0.3s;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(210, 150, 255, 0.4);
 }
 
-/* ------------------------------
-   Buttons
------------------------------- */
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background: linear-gradient(135deg, #9b5de5, #6a00f4);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ABOUT PAGE GRID */
+.about {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #b388ff;
+.about div {
+  grid-column: span 2;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 15px;
 }
 
-/* ------------------------------
-   Footer
------------------------------- */
-footer {
-  width: 100%;
+/* UPLOAD + CONTACT + COMMISSION */
+.section-box,
+.commission {
+  margin: 50px auto;
+  width: 80%;
+  padding: 40px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
   text-align: center;
-  padding: 20px 0;
-  margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: #d1b3ff;
-  font-size: 0.9rem;
-  background: rgba(40, 0, 80, 0.4);
 }
 
-/* ------------------------------
-   Responsive Design
------------------------------- */
-@media (max-width: 768px) {
-  .logo { font-size: 1.6rem; }
-  nav a { margin: 0 8px; font-size: 0.9rem; }
-  section h2 { font-size: 1.6rem; }
+/* CUSTOM CURSOR */
+#cursor {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: transform 0.1s linear;
 }
+/* -------------------------
+COMMISSION PAGE FIXED DESIGN
+--------------------------*/
+
+.commission {
+  width: 70%;
+  margin: 80px auto;
+  padding: 50px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(170, 75, 255, 0.2);
+}
+
+.commission h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #e4c2ff;
+  text-shadow: 0 0 10px #c77cff;
+}
+
+.commission p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Input fields */
+.commission input,
+.commission textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.09);
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+/* Focus glow */
+.commission input:focus,
+.commission textarea:focus {
+  border-color: #c77cff;
+  box-shadow: 0 0 12px #b56aff;
+  outline: none;
+}
+
+/* Submit button */
+.commission button {
+  padding: 12px 30px;
+  margin-top: 15px;
+  background: rgba(170,75,255,0.35);
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #b56aff;
+}
+
+.commission button:hover {
+  background: rgba(170,75,255,0.55);
+  transform: scale(1.05);
+  box-shadow: 0 0 16px #d59aff;
+}
+

@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upload Artwork - Digital Art Gallery</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Art</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="fade-in">
-    <h1 class="logo">Upload Artwork</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="upload.html" class="active">Upload</a>
-      <a href="commissions.html">Commissions</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<div id="cursor"></div>
 
-<div class="custom-cursor"></div>
 
-  <section class="upload-section fade-in">
-    <h2>Share Your Art 🖌️</h2>
-    <p>Upload your digital drawings and showcase them to the world!</p>
-    <form class="upload-form">
-      <input type="text" placeholder="Artwork Title" required>
-      <input type="file" accept="image/*" required>
-      <textarea placeholder="Description"></textarea>
-      <button class="btn">Upload Artwork</button>
-    </form>
-  </section>
+<header class="fade-in">
+  <h1 class="logo">Upload Art</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="upload.html">Upload</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer class="fade-in">
-    <p>© 2025 Digital Art Gallery | Created by Harshil</p>
-  </footer>
-  <script src="script.js"></script>
+<section class="section-box fade-in">
+  <h2>Upload Your Artwork</h2>
+
+  <input type="file" id="fileInput">
+  <button class="btn" onclick="uploadImage()">Upload</button>
+
+  <div id="uploadResult" style="margin-top: 20px;"></div>
+</section>
+
+<footer class="fade-in">
+  © 2025 Digital Art Gallery | Harshil
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

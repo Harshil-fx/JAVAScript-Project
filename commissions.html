@@ -3,37 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commissions - Digital Art Gallery</title>
+  <title>Commissions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="fade-in">
-    <h1 class="logo">Art Commissions</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="upload.html">Upload</a>
-      <a href="commissions.html" class="active">Commissions</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<div id="cursor"></div>
 
-<div class="custom-cursor"></div>
 
-  <section class="comm fade-in">
-    <h2>Request Custom Art 🖼️</h2>
-    <p>Want a personalized drawing or portrait? Fill out the form below to commission your dream artwork.</p>
-    <form class="commission-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea placeholder="Describe Your Commission Request" required></textarea>
-      <button class="btn">Submit Request</button>
-    </form>
-  </section>
+<header class="fade-in">
+  <h1 class="logo">Commissions</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="upload.html">Upload</a>
+    <a class="active" href="commissions.html">Commissions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer class="fade-in">
-    <p>© 2025 Digital Art Gallery | Created by Harshil</p>
-  </footer>
-  <script src="script.js"></script>
+<section class="commission fade-in">
+  <h2>Request a Commission</h2>
+  <p>Fill the form below and I will receive your request in email.</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="85e8f71e-32d0-498b-8920-15ba98d8a888">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit Form</button>
+</form>
+
+</section>
+
+
+<footer class="fade-in">
+  © 2025 Digital Art Gallery | Harshil
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
